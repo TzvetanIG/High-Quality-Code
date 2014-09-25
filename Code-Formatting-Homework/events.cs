@@ -30,9 +30,13 @@ class Event : IComparable
         if (byDate == 0)
         {
             if (byTitle == 0)
+            {
                 return byLocation;
+            }
             else
-            { return byTitle; }
+            {
+                return byTitle;
+            }
         }
         else
         {
