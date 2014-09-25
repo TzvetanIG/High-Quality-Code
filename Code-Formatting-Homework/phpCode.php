@@ -1,5 +1,4 @@
 <?php
-
 namespace League\CLImate\Settings;
 
 class Manager
