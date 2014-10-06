@@ -1,0 +1,35 @@
+import java.awt.Color;
+import java.awt.Graphics;
+import java.util.Random;
+
+public class Apple {
+	public static Random randomGenerator;
+	private PointOfSnake apple;
+	private Color appleColor;
+
+	public Apple(Snake s) {
+		apple = createApple(s);
+		appleColor = Color.RED;
+	}
+
+	private PointOfSnake createApple(Snake s) {
+		randomGenerator = new Random();
+		int x = randomGenerator.nextInt(30) * 20;
+		int y = randomGenerator.nextInt(30) * 20;
+		for (PointOfSnake snakePoint : s.snakeBody) {
+			if (x == snakePoint.getX() || y == snakePoint.getY()) {
+				return createApple(s);
+			}
+		}
+
+		return new PointOfSnake(x, y);
+	}
+
+	public void drawQbalkata(Graphics g) {
+		apple.draw(g, appleColor);
+	}
+
+	public PointOfSnake daiTo4ka() {
+		return apple;
+	}
+}
