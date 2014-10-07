@@ -25,11 +25,11 @@ public class Apple {
 		return new PointOfSnake(x, y);
 	}
 
-	public void drawQbalkata(Graphics g) {
+	public void drawApple(Graphics g) {
 		apple.draw(g, appleColor);
 	}
 
-	public PointOfSnake daiTo4ka() {
+	public PointOfSnake getApple() {
 		return apple;
 	}
 }

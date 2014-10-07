@@ -49,7 +49,7 @@ public class Game extends Canvas implements Runnable {
 		g.clearRect(0, 0, WIDTH, HEIGHT + 25);
 		g.drawRect(0, 0, WIDTH, HEIGHT);
 		snake.drawSnake(g);
-		apple.drawQbalkata(g);
+		apple.drawApple(g);
 		g.drawString("score= " + score, 10, HEIGHT + 25);
 	}
 }

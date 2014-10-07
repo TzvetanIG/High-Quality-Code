@@ -41,8 +41,8 @@ public class Snake{
 			Game.gameRunning = false;
 		} else if (head.getY() > Game.HEIGHT - 20) {
 			Game.gameRunning = false;
-		} else if (Game.apple.daiTo4ka().equals(head)) {
-			this.snakeBody.add(Game.apple.daiTo4ka());
+		} else if (Game.apple.getApple().equals(head)) {
+			this.snakeBody.add(Game.apple.getApple());
 			Game.apple = new Apple(this);
 			Game.score += 50;
 		} else if (this.snakeBody.contains(head)) {
